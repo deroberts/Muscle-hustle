@@ -1,14 +1,15 @@
 
+
+
 {{#each review as reviews| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
-      {{{get_emoji}}}
       <a href="/review/{{review.id}}">{{review.name}}</a>
     </h2>
     <p>
       
-    <p>Created by {{review.user.name}} on {{format_date project.date_created}}</p>
+    <p>Created by {{review.user.name}} on {{review.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>

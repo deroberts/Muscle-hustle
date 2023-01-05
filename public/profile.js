@@ -6,18 +6,18 @@ const newFormHandler = async (event) => {
     const description = document.querySelector('#review-desc').value.trim();
   
     if (name && description && id) {
-      const response = await fetch(`/api/projects`, {
+      const response = await fetch(`/api/user`, {
         method: 'POST',
-        body: JSON.stringify({ name, needed_funding, description }),
+        body: JSON.stringify({ name, description, id}),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/user');
       } else {
-        alert('Failed to create project');
+        alert('Failed to create User');
       }
     }
   };
@@ -26,23 +26,20 @@ const newFormHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/projects/${id}`, {
+      const response = await fetch(`/api/user/${id}`, {
         method: 'DELETE',
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/user');
       } else {
-        alert('Failed to delete project');
+        alert('Failed to delete User');
       }
     }
   };
   
-  document
-    .querySelector('.new-project-form')
-    .addEventListener('submit', newFormHandler);
   
   document
-    .querySelector('.project-list')
+    .querySelector('.profile-list')
     .addEventListener('click', delButtonHandler);
   
