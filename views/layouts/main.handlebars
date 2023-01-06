@@ -24,6 +24,15 @@
         <a href="/login">login</a>
         {{/if}}
       </nav>
+    
+    <nav>
+        {{#if .}}
+        <a href="/review">write review here!</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        {{!-- <a href="/login">login</a> --}}
+        {{/if}}
+      </nav>
     </header>
     <main class="container container-fluid mt-5">
       
