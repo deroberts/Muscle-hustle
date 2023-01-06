@@ -30,6 +30,10 @@ const sessionconfig = {
   })
 };
 
+app.get('/', (req, res) => {
+  res.render('homepage');
+});
+
 app.use(session(sessionconfig));
 
 // Inform Express.js on which template engine to use
