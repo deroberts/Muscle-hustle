@@ -4,11 +4,11 @@
   </div>
 </div>
 
- {{#if projects.length}}
+ {{#if .}}
   <div class="col-md-6 profile-list">
     <h3>Reviews I have made:</h3>
 
-    {{#each reviews as |review|}}
+    {{#each .}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/profile/{{user.id}}">{{user.name}}</a></h4>

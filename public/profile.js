@@ -22,24 +22,24 @@ const newFormHandler = async (event) => {
     }
   };
   
-  const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
+  // const delButtonHandler = async (event) => {
+  //   if (event.target.hasAttribute('data-id')) {
+  //     const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/user/${id}`, {
-        method: 'DELETE',
-      });
+  //     const response = await fetch(`/api/user/${id}`, {
+  //       method: 'DELETE',
+  //     });
   
-      if (response.ok) {
-        document.location.replace('/user');
-      } else {
-        alert('Failed to delete User');
-      }
-    }
-  };
+  //     if (response.ok) {
+  //       document.location.replace('/user');
+  //     } else {
+  //       alert('Failed to delete User');
+  //     }
+  //   }
+  // };
   
   
   document
     .querySelector('.profile-list')
-    .addEventListener('click', delButtonHandler);
+    .addEventListener('click',);
   
