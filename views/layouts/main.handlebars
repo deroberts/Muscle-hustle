@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muscle Hustle</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" type ="text/css" href="/css/style.css">
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <a href="/">Review a Muscle Car!</a>
+        <a>Review a Muscle Car!</a>
       </h1>
       <a href="/public/images/Screenshot 2023-01-02 at 8.01.44 PM.png"></a>
       <nav>
@@ -35,9 +35,13 @@
   </div>
 
   
+  {{#if logged_in}}
+  <script src="/scripts/logout.js"></script>
   {{#if .}}
   <script src="/public/logout.js"></script>
   {{/if}}
+ 
+  <script src="/scripts/login.js"></script>
 </body>
 
 </html>
