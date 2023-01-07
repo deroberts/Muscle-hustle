@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -44,14 +44,21 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/review', (req, res) => {
+router.get('/review', async (req, res) => {
+try {
+ const reviewData = await Review.findAll();
+ const reviews = reviewData.map((review) => review.get({ plain: true }));
 
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
+  res.render('review', {reviews});
+  
+ } catch (err) {
+  res.status(500).json(err);
+}
+  // if (req.session.logged_in) {
+  //   res.redirect('/profile');
+  //   return;
+  // }
 
-  res.render('review');
 });
 
 module.exports = router;                       
