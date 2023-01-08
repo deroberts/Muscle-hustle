@@ -1,7 +1,19 @@
 const sequelize = require('../config/connection');
 const { User, } = require('../models');
 
-const userData = require('./userData.json');
+const userData = [
+  {
+    'name': 'justo',
+    'email': 'eliseo101801@gmail.com',
+    'password': 'pass321'
+
+  },
+  {
+    'name': 'derek',
+    'email': '123@gmail.com',
+    'password': 'pass321'
+  }
+]
 
 
 const seedDatabase = async () => {

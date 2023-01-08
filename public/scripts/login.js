@@ -1,3 +1,5 @@
+const loginForm = document.querySelector('.login-form')
+const signupForm = document.querySelector('.signup-form')
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -13,7 +15,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/users');
+        document.location.replace('/profile');
       } else {
         alert(response.statusText);
       }
@@ -28,6 +30,11 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector('#password-signup').value.trim();
   
     if (name && email && password) {
+      if (email.indexOf('@') === -1) {
+        alert('Please enter a valid email address');
+        return;
+      }
+
       const response = await fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify({ name, email, password }),
@@ -35,18 +42,17 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/users');
+        document.location.replace('/profile');
       } else {
         alert(response.statusText);
       }
     }
   };
   
-  document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
   
-  document
-    .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
   
+if (loginForm) {
+  loginForm.addEventListener('submit', loginFormHandler);
+}
+if (signupForm) {
+  signupForm.addEventListener('submit', signupFormHandler);}
