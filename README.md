@@ -6,7 +6,13 @@ Don't have a story to share? Use Muscle Hustle to learn what cars are a good inv
 
 # Technologies
 
-Axios, bcrypt, Cherrio, Sequalize, MySQL, and Node.js
+For this application, our group has used the Sequalize, Axios, Dotenv, and MySql.
+
+In using Sequalize and Mysql together, we are able to build the database for our application. The functions for the Sequalize NPM can be found throughout the repository, especially under our configuartion file.
+
+In using the Axios, our application is able to use the NPM's "get" feature in order to make HTTP requests and be able to disply HTML pages from websites like motorauthority.com.
+
+Finally, for the Dotenv NPM, this has been used in our application in order for the user to be able to login with MySQL credentials, and access the database as well as the localhost URL that displays the handlebars.
 
 # Screenshot
 
