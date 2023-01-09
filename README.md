@@ -15,6 +15,7 @@ In using the Axios, our application is able to use the NPM's "get" feature in or
 Finally, for the Dotenv NPM, this has been used in our application in order for the user to be able to login with MySQL credentials, and access the database as well as the localhost URL that displays the handlebars.
 
 # Screenshot
+<img width="1344" alt="Screenshot 2023-01-08 at 10 17 56 PM" src="https://user-images.githubusercontent.com/110508944/211240440-ac12ec9f-fc04-4e29-ab10-99f04572f3ac.png">
 
 # Deployment link
 
