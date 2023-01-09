@@ -3,9 +3,9 @@
     <h3>Reviews</h3>
     {{#each reviews}}
       <div class="card card-body mb-2">
-        <h4>{{this.title}}</h4>
-        <p>{{this.review}}</p>
-        {{!-- <p>Created by {{this.user.name}} on {{this.date_created}}</p> --}}
+        <h4>{{review.title}}</h4>
+        <p>{{review.review}}</p>
+       
       </div>
     {{/each}}
     <h3>Write your Review below:</h3>
@@ -22,6 +22,6 @@
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
-      <p>Created by {{review.user.name}} on {{review.date_created}}</p>
+      <p>Created by {{user.name}}</p>
     </form>
   </div>
