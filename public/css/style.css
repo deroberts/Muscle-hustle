@@ -1,31 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
+:root{
+  font-size: 14px;
+}
 * {
+
   font-family: "Bebas Neue", cursive;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0%;
 }
 
 body {
   background-color: rgb(107, 159, 204);
   box-sizing: border-box;
   margin: 0;
+  
 }
 
 .sub-header {
-  text-align: center;
-  margin: 1rem auto;
+  font-size: 40px;
 }
 
 .banner {
+  height: 24%;
   background-color: white;
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding:0 3rem ;
+  margin-bottom: 3rem;
 }
 
 .logo {
-  margin: 0 auto;
-  width: 275px;
+
+  width: 9rem;
 }
 
 .login-body {
@@ -44,14 +53,12 @@ body {
 .navbar {
   display: flex;
   flex-flow: column nowrap;
-  width: 33%;
-  margin: 1rem auto;
-  text-align: center;
+  text-align: right;
+  font-size: 20px;
 }
-
 .navbar > a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 /* collapsible section for review replies  */
 .collapsible[data-state="collapsed"] > * {
@@ -73,6 +80,7 @@ input {
 
   form {
     margin-bottom:10px;
+   
   }
 
   button {
@@ -89,18 +97,7 @@ input {
     color: black;
   }
 
-  #logo {
-    width: 250px;
 
-  }
-
-  .topnav {
-    overflow: hidden;
-    display: flex;
-    justify-content: center; 
-    background-color: black; 
-    
-  }
 
  ul {
     list-style-type: none;
@@ -127,10 +124,30 @@ input {
     text-underline-offset: 1em;
   }
 
-  div#logo-li {
-    width: 300px;
-    margin: auto;
-  }
+
 
   
-  
+.reviews{
+  margin-left: 10px;
+}
+.reviews-text{
+  margin-left: 10px;
+}
+
+#review-name{
+  height: 30px;
+  width: 150px;
+}
+
+#review-desc{
+  height: 30px;
+  width: 150px;
+ position: relative;
+ top: 7px;
+}
+
+@media screen and (max-width:720px) {
+  :root{
+    font-size: 12px;
+  }
+}
