@@ -11,28 +11,26 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a>Review a Muscle Car!</a>
-      </h1>
-      <img src="/images/logo.png" id="logo" alt="logo">
-      <nav>
         
-        {{#if logged_in}}
-        <a href="/profile">My Profile</a> |
+      <div id="logo-li"><img src="/images/logo.png" id="logo" alt="logo"></div>
+      <nav class="topnav">
+         {{#if logged_in}}
+       <ul>
+       <li class="menu-item"><a href="/profile">My Profile</a></li> 
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <li class="menu-item"><a href="/login">Login</a></li>
         {{/if}}
-      </nav>
-    
-    <nav>
+        
         {{#if .}}
-        <a href="/review">write review here!</a> |
+        <li class="menu-item"><a href="/review">Review</a></li> 
         <button class="no-button" id="logout">logout</button>
         {{else}}
 
         {{/if}}
+         </ul>
       </nav>
+      
     </header>
     <main class="container container-fluid mt-5">
       

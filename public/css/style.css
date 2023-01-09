@@ -1,3 +1,78 @@
 body {
-    background-color: aliceblue;
+    background-color: white;
 }
+
+input {
+    padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width:300px;
+  }
+
+  form {
+    margin-bottom:10px;
+  }
+
+  button {
+    height: 31px;
+    width: 110px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 200;
+    background: #dddddd;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: black;
+  }
+
+  #logo {
+    width: 250px;
+
+  }
+
+  .topnav {
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    background-color: black; 
+    
+  }
+
+ ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+  }
+
+  li.menu-item {
+    display: inline;
+    
+  }
+
+  li.menu-item a {
+    display: inline-block;
+    padding: 15px;
+    margin: 8px;
+    text-decoration: none;
+    color: white;
+  }
+
+  li.menu-item a:hover {
+    text-decoration: underline;
+    color: white;
+    text-underline-offset: 1em;
+  }
+
+  div#logo-li {
+    width: 300px;
+    margin: auto;
+  }
+
+  
+  
