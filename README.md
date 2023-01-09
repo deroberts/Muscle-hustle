@@ -6,7 +6,7 @@ Don't have a story to share? Use Muscle Hustle to learn what cars are a good inv
 
 # Technologies
 
-Besides using Sequalize, MySQL, and Node.js, we have also been using Axios, bcrypt, and Cherrio.
+Axios, bcrypt, Cherrio, Sequalize, MySQL, and Node.js
 
 # Screenshot
 
