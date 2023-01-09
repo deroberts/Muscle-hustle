@@ -1,0 +1,22 @@
+{
+    "reviews": [
+      {
+        "id": 1,
+        "title": "I love mustangs!",
+        "description": "I love vintage Mustangs!.",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "title": "Disappointing",
+        "description": "I was really looking forward to using this product, but it ended up being a huge disappointment. It did not work as advertised and I would not recommend it.",
+        "rating": 1
+      },
+      {
+        "id": 3,
+        "title": "So-so",
+        "description": "This product was okay. It did what it was supposed to, but there were definitely better options available.",
+        "rating": 3
+      }
+    ]
+  }
