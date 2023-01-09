@@ -3,24 +3,15 @@ const { User, Review, ReviewComment } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
+  console.log("========")
   try {
-    const reviewData = await Review.findAll({
-      include: {
-        model: ReviewComment,
-        as: "reviews",
-        attributes: ["user_id", "reply"]
-      }
+    const reviewData = await Review.findAll();
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    reviews.forEach((review) => {
+      console.log(review);
     });
-    // const reviews = reviewData.map((review) => review.get({ plain: true }));
-    const reviews = [
-      {
-        name: "awesome review",
-        body: "dude this car is sick let's go"
-      }
-    ];
-    const isLoggedIn = req.session.logged_in;
-    console.log(isLoggedIn);
-    res.render("homepage", { reviews });
+   // if not logged in hide form
+    res.render("homepage", {reviews, logged_in:req.session.logged_in} );
   } catch (err) {
     res.status(500).json(err);
   }
@@ -28,6 +19,7 @@ router.get("/", withAuth, async (req, res) => {
 
 // Use withAuth middleware to prevent access to route
 router.get("/profile", withAuth, async (req, res) => {
+  console.log("====profile====")
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
