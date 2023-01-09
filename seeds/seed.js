@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, } = require('../models');
+const { User } = require('../models');
 
 const userData = [
 
@@ -21,7 +21,6 @@ const userData = [
     'password': 'pass321'
   }
 ]
-
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
