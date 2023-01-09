@@ -23,18 +23,19 @@ const loginFormHandler = async (event) => {
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
+  event.stopPropagation();
 
-  const name = document.querySelector("#name-signup").value.trim();
-  const email = document.querySelector("#email-signup").value.trim();
-  const password = document.querySelector("#password-signup").value.trim();
-
+  const name = document.getElementById("name-signup").value.trim();
+  const email = document.getElementById("email-signup").value.trim();
+  const password = document.getElementById("password-signup").value.trim();
+  console.log(name, email, password);
   if (name && email && password) {
     if (email.indexOf("@") === -1) {
       alert("Please enter a valid email address");
       return;
     }
 
-    const response = await fetch("/api/users", {
+    const response = await fetch("/api/users/signup", {
       method: "POST",
       body: JSON.stringify({ name, email, password }),
       headers: { "Content-Type": "application/json" }
