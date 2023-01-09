@@ -59,10 +59,9 @@ body {
 
 .collapsible[data-state="expanded"] > * {
 }
-=======
 
-    background-color: white;
-}
+
+ 
 
 input {
     padding: .5em .6em;
