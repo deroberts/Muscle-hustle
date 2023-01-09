@@ -1,12 +1,12 @@
 # Muscle Hustle Reviews
 
-Our application for project 2 is a review app, where users can be able to post reviews about certain muscle cars they have owned before or currently own.
+Calling all muscle car aficionados. Tell us about where that beast of an engine has taken you, tune ups you've done, and all other great ownership stories. Muscle Hustle is a place where you can post about your current car(s), previously owned cars, or heck even one of your friends'. This is also a place for you to interact with other muscle car owners and hear about their adventures. 
 
-This application is particurly importnat to those who are seeking information as to what cars are a good investment, and those that car buyers should stay away from. 
+Don't have a story to share? Use Muscle Hustle to learn what cars are a good investment, best for whatever project you wish to embark on, or even what car you may want to stay away from. Look no further for your collection of muscle car experts!
 
 # Technologies
 
-Besides using Sequalize, MySQL, and Node.js, we have also been using Axios, bcrypt, and Cherrio.
+Axios, bcrypt, Cherrio, Sequalize, MySQL, and Node.js
 
 # Screenshot
 
@@ -14,7 +14,7 @@ Besides using Sequalize, MySQL, and Node.js, we have also been using Axios, bcry
 
 # Members of Project
 
-Thomas Carlson
 Brett Bates
-Derek Roberts
+Thomas Carlson
 Justo Menchaca
+Derek Roberts
