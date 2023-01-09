@@ -1,0 +1,40 @@
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Reviews</h3>
+    {{#if reviews}}
+      {{#each reviews as |review|}}
+        <div class="card card-body mb-2">
+          <h4>{{review.title}}</h4>
+          <p>{{review.review}}</p>
+        </div>
+        <form class="reply-comment-form">
+
+        </form>
+      {{/each}}
+    {{/if}}
+    <h3>Write your Review below:</h3>
+
+    <form class="form new-review-form">
+      <div class="form-group">
+        <label for="review-name">Review Title</label>
+        <input
+          class="form-input"
+          type="text"
+          id="review-name"
+          name="review-name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="review-desc">Review Description</label>
+        <textarea
+          class="form-input"
+          id="review-desc"
+          name="review-desc"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+</div>

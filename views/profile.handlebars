@@ -1,24 +1,16 @@
+{{> header}}
+
+
+ {{#if user}}
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{user.name}}!</h2>
+    <div>
+      <h4>Email:</h4>
+    <p>{{user.email}}</p>
+    </div>
   </div>
 </div>
-
- {{#if user.length}}
-  <div class="col-md-6 profile-list">
-    <h3>Reviews I have made:</h3>
-
-    {{#each reviews as |review|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/profile/{{user.id}}">{{user.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{user.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
+{{/if}}
 </div>
 

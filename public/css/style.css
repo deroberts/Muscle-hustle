@@ -1,4 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  font-family: "Bebas Neue", cursive;
+}
+
 body {
+  background-color: rgb(107, 159, 204);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.sub-header {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.banner {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 275px;
+}
+
+.login-body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.login-container,
+.signup-container {
+  width: 66%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 33%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.navbar > a {
+  text-decoration: none;
+  color: white;
+}
+/* collapsible section for review replies  */
+.collapsible[data-state="collapsed"] > * {
+}
+
+.collapsible[data-state="expanded"] > * {
+}
+=======
 
     background-color: white;
 }
@@ -78,5 +139,3 @@ input {
 
   
   
-
-

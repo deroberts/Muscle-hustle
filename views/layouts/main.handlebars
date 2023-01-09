@@ -1,55 +1,19 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muscle Hustle</title>
-  <link rel="stylesheet" type ="text/css" href="/css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muscle Hustle</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-        
-      <div id="logo-li"><img src="/images/logo.png" id="logo" alt="logo"></div>
-      <nav class="topnav">
-         {{#if logged_in}}
-       <ul>
-       <li class="menu-item"><a href="/profile">My Profile</a></li> 
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <li class="menu-item"><a href="/login">Login</a></li>
-        {{/if}}
-        
-        {{#if .}}
-        <li class="menu-item"><a href="/review">Review</a></li> 
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
+  </head>
 
-        {{/if}}
-         </ul>
-      </nav>
-      
-    </header>
-    <main class="container container-fluid mt-5">
-      
-      {{{ body }}}
+  <body>
+    <main>
+      {{{body}}}
+
     </main>
-    <footer>
-      
-    </footer>
-  </div>
-
-  
-  {{#if logged_in}}
-  <script src="/scripts/logout.js"></script>
-  {{/if}}
- 
-  <script src="/scripts/login.js"></script>
-  {{#if logged_in}}
-  <script src="/scripts/review.js"></script>
-  {{/if}}
-</body>
-
+    <script src="/scripts/login.js"></script>
+    <script src="/scripts/logout.js"></script>
+  </body>
 </html>
