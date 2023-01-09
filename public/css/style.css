@@ -66,10 +66,11 @@ input {
 
   li.menu-item a:hover {
     text-decoration: underline;
-    color: white;
+    color: rgb(241, 67, 67);
     text-underline-offset: 1em;
   }
 
+  
   div#logo-li {
     width: 300px;
     margin: auto;
