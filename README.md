@@ -12,7 +12,7 @@ In using Sequalize and Mysql together, we are able to build the database for our
 
 In using the Axios, our application is able to use the NPM's "get" feature in order to make HTTP requests and be able to disply HTML pages from websites like motorauthority.com.
 
-Finally, for the Dotenv NPM, this has been used in our application in order for the user to be able to login with MySQL credentials, and access the database as well as the localhost URL that displays the handlebars. 
+Finally, for the Dotenv NPM, this has been used in our application in order for the user to be able to login with MySQL credentials, and access the database as well as the localhost URL that displays the handlebars.
 
 # Screenshot
 
