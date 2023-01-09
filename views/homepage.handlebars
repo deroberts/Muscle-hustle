@@ -5,12 +5,17 @@
     <h2>
       <a href="/review/{{review.id}}">{{review.name}}</a>
     </h2>
+    {{!-- trying to add a reply after the review title and description  --}}
     <p>
+      <a href="/review/{{reviewcomment.review_id}}">{{reviewcomment.reply}}</a>
+    </p>
+    </div>
+
       
   </div>
   <div class="col-md-7">
     <p>
-      {{review.descrirption}}
+      {{review.description}}
     </p>
   </div>
 </div>

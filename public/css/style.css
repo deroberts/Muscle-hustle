@@ -1,3 +1,10 @@
 body {
     background-color: aliceblue;
 }
+
+/* collapsible section for review replies  */
+.collapsible [data-state='collapsed'] > * { 
+}
+
+.collapsible [data-state='expanded'] > * { 
+}
