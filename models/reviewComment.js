@@ -1,5 +1,5 @@
 //models page for the review schema
-const { Sequelize, Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class ReviewComment extends Model {}

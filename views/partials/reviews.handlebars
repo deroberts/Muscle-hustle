@@ -1,21 +1,38 @@
 <div class="row mt-4">
   <div class="col-md-6">
+
     <h3 class="reviews-text">Reviews</h3>
     {{#if reviews}}
+    <h3>Muscle Hustler's Reviews</h3>
+   <div class = "gd-reviews"> 
+
+
       {{#each reviews as |review|}}
         <div class="card card-body mb-2">
           <h4>{{review.title}}</h4>
           <p>{{review.review}}</p>
         </div>
-        <form class="reply-comment-form">
+        <form class="reply-comment-form"  data-id={{review.id}}>
+          <input>
+
+          </input>
+          <button type="submit">Reply</button>
 
         </form>
       {{/each}}
+
     {{/if}}
     <div class="reviews">
     <h3>Write your Review below:</h3>
 
-    <form class="form new-review-form">
+
+   </div>
+
+
+    {{#if logged_in}}
+    <h3>Post your Review below:</h3>
+
+    <form class="form new-review-form" id ="new-review-form">
       <div class="form-group">
         <label for="review-name">Review Title</label>
         <input
@@ -37,6 +54,10 @@
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
+
     </div>
+
+    {{/if}}
+
   </div>
 </div>

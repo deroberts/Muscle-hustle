@@ -67,7 +67,6 @@ body {
 .collapsible[data-state="expanded"] > * {
 }
 
-
 input {
     padding: .5em .6em;
     display: inline-block;
