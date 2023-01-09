@@ -10,11 +10,11 @@ async function newFormHandler(event) {
     method: "POST",
     body: JSON.stringify({
       title,
-      review,
+      review
     }),
     headers: {
-      "Content-Type": "application/json",
-    },
+      "Content-Type": "application/json"
+    }
   });
 
   if (response.ok) {
@@ -43,11 +43,11 @@ async function replyCommentHandler(event) {
       body: JSON.stringify({
         user_id,
         review_id,
-        reply,
+        reply
       }),
       headers: {
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json"
+      }
     });
 
     if (response.ok) {
