@@ -5,10 +5,10 @@
     {{#if reviews}}
     <h3>Muscle Hustler's Reviews</h3>
    <div class = "gd-reviews"> 
-
-
+{{!-- Review section of application --}}
       {{#each reviews as |review|}}
         <div class="card card-body mb-2">
+         {{!-- Referencing models for review --}}
           <h4>{{review.title}}</h4>
           <p>{{review.review}}</p>
         </div>
@@ -16,6 +16,7 @@
           <input>
 
           </input>
+          {{!-- Reply button --}}
           <button type="submit">Reply</button>
 
         </form>
@@ -31,7 +32,7 @@
 
     {{#if logged_in}}
     <h3>Post your Review below:</h3>
-
+{{!-- Section where User can write their review --}}
     <form class="form new-review-form" id ="new-review-form">
       <div class="form-group">
         <label for="review-name">Review Title</label>
