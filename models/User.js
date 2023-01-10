@@ -9,6 +9,9 @@ class User extends Model {
 }
 
 User.init(
+  // define fields/columns on model
+  // `id` is  automatically created by sequelize
+  
   {
     id: {
       type: DataTypes.INTEGER,
