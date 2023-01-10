@@ -46,7 +46,7 @@ app.use(express.urlencoded({ extended: true })); // send form data can be sent t
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
-
+/* Local host reference*/
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
     console.log(`Now listening on: http://localhost:` + PORT)
